@@ -23,6 +23,17 @@
     background-position: center 35%;
   }
 }
+@media screen and (max-width: 800px) {
+  .steps__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .steps__item {
+    max-width: 240px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
 @media screen and (max-width: 700px) {
   .content {
     height: auto;
@@ -103,5 +114,9 @@
 
   .subtitle {
     font-size: 12px;
+  }
+
+  .steps__item {
+    max-width: 150px;
   }
 }
