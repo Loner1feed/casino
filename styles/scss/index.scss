@@ -281,7 +281,7 @@ $yellow: #FFF323;
         color: $blue;
         font-weight: bold;
         margin-top: 5px;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
     }
 
     &__text{
@@ -298,7 +298,9 @@ $yellow: #FFF323;
     &__subtitle{
         font-size: 10px;
         color: #fff;
-        line-height: 8px;
+        line-height: 2px;
+        display: block;
+        line-height: 10px;
         text-transform: uppercase;
     }
 }
