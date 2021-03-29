@@ -218,10 +218,17 @@
   padding-right: 60px;
   padding-top: 48px;
   margin-right: 10px;
+  margin-left: -20px;
   background: url(../../img/svg/arrow-row.svg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+}
+.steps__item:first-child {
+  margin-left: 10px;
+}
+.steps__item:last-child {
+  margin-right: 10px;
 }
 .steps__item:before {
   content: "";
@@ -233,7 +240,7 @@
   background-size: 150%;
   background-position: 40%;
   background-repeat: no-repeat;
-  left: -30px;
+  left: -15px;
   top: -6px;
 }
 .steps__item:after {
@@ -246,7 +253,7 @@
   background-size: 150%;
   background-position: 40%;
   background-repeat: no-repeat;
-  right: -30px;
+  right: -25px;
   top: -6px;
 }
 .steps__title {
@@ -271,6 +278,9 @@
   display: block;
   line-height: 10px;
   text-transform: uppercase;
+}
+.steps__icon {
+  display: none;
 }
 
 .icons__wrap {

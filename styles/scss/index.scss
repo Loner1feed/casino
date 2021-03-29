@@ -255,10 +255,20 @@ $yellow: #FFF323;
         padding-right: 60px;
         padding-top: 48px;
         margin-right: 10px;
+        margin-left: -20px;
         background: url(../../img/svg/arrow-row.svg);
         background-repeat: no-repeat;
         background-size: cover;
         text-align: center;
+
+        &:first-child{
+            margin-left: 10px;
+        }
+
+        &:last-child{
+            margin-right: 10px;
+        }
+
         &:before{
             content: '';
             position: absolute;
@@ -269,7 +279,7 @@ $yellow: #FFF323;
             background-size: 150%;
             background-position: 40%;
             background-repeat: no-repeat;
-            left: -30px;
+            left: -15px;
             top: -6px;
         }
         &:after{
@@ -282,7 +292,7 @@ $yellow: #FFF323;
             background-size: 150%;
             background-position: 40%;
             background-repeat: no-repeat;
-            right: -30px;
+            right: -25px;
             top: -6px;
         }
     }
@@ -312,6 +322,10 @@ $yellow: #FFF323;
         display: block;
         line-height: 10px;
         text-transform: uppercase;
+    }
+
+    &__icon{
+        display: none;
     }
 }
 
