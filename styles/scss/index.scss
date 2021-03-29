@@ -16,6 +16,7 @@ $yellow: #FFF323;
 // common styles
 .wrap{
     max-width: 940px;
+    // height: 100%;
     margin: 0px auto;
     padding: 0px 20px;
 }
@@ -125,13 +126,14 @@ $yellow: #FFF323;
 }
 
 .content{
-    // height: 100vh;
-    // min-height: min-content;
+    height: 100vh;
+    min-height: 100vh;
     background: url(../../img/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    // display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 // header
@@ -151,12 +153,23 @@ $yellow: #FFF323;
 
 // main
 .main{
+    margin: auto 0;
     &__wrap{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 20px;
         padding-bottom: 10px;
+    }
+
+    &__timer{
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'din';
+        font-weight: 300;
+        margin-bottom: 10px;
+        text-shadow: 0 0 10px #FF001F;
     }
 
     &__content{
@@ -175,9 +188,6 @@ $yellow: #FFF323;
 
     &__subtitle{
         margin-bottom: 5px;
-        &--glow{
-            margin-bottom: 10px;
-        }
     }
 
     &__title{
@@ -321,8 +331,10 @@ $yellow: #FFF323;
         width: 100%;
         font-size: 30px;
         color: $blue;
-        span{
+        a{
             margin: 0px 5px;
+            text-decoration: none;
+            color: inherit;
         }
     }
 }
