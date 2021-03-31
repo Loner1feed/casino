@@ -181,6 +181,13 @@ $yellow: #FFF323;
         display: flex;
         margin-bottom: 5px;
     }
+
+    &__logo{
+        width: 160px;
+        img{
+            margin-bottom: -25px;
+        }
+    }
 }
 
 // main
@@ -212,6 +219,7 @@ $yellow: #FFF323;
         text-align: center;
         align-items: center;
         background: url(../../img/banner-left.png);
+        animation: chest 3s infinite ease;
         background-size: 60%;
         background-position: center 35%;
         background-repeat: no-repeat;
@@ -304,6 +312,20 @@ $yellow: #FFF323;
     }
 }
 
+@keyframes chest{
+    0%{
+        background-position: center 35%;
+    }
+
+    30%{
+        background-position: center 25%;
+    }
+
+    100%{
+        background-position: center 35%;
+    }
+}
+
 // steps
 .steps {
     // display: none;
@@ -318,6 +340,7 @@ $yellow: #FFF323;
 
     &__item {
         position: relative;
+        cursor: pointer;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -341,6 +364,18 @@ $yellow: #FFF323;
             margin-right: 10px;
         }
 
+        // &#steps1{
+        //     z-index: 3;
+        // }
+
+        // &#steps2{
+        //     z-index: 2;
+        // }
+
+        // &#steps3{
+        //     z-index: 1;
+        // }
+
         &:before {
             content: '';
             position: absolute;
@@ -353,6 +388,9 @@ $yellow: #FFF323;
             background-repeat: no-repeat;
             left: -15px;
             top: -6px;
+            transform: translateX(0);
+            transition: 0.5s;
+            z-index: 3;
         }
 
         &:after {
@@ -367,7 +405,18 @@ $yellow: #FFF323;
             background-repeat: no-repeat;
             right: -25px;
             top: -6px;
+            z-index: 3;
         }
+
+        &:hover::before{
+            // transform: translateX(100%);
+            left: 100%;
+            opacity: 0;
+        }
+
+        // &:hover::after{
+        //     display: none;
+        // }
     }
 
     &__title {
@@ -403,22 +452,6 @@ $yellow: #FFF323;
             margin-right: auto;
             display: block;
         }
-    }
-}
-
-.animated-arrow {
-    position: absolute;
-    display: block;
-    height: 60px;
-    width: 50px;
-    background: url(../../img/svg/arrow.svg);
-    background-size: 150%;
-    background-position: 40%;
-    background-repeat: no-repeat;
-    left: -15px;
-    top: -6px;
-    &__anim{
-        animation: animArrow 1s;
     }
 }
 

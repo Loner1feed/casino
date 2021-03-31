@@ -27,21 +27,3 @@ $(function(){
             }
     });
 });
-
-function arrowAnim(name){
-        name.mouseenter(function(){
-                name.children('.animated-arrow').addClass('animated-arrow__anim');
-                window.setTimeout(function () {
-                        $('.animated-arrow__anim').removeClass('animated-arrow__anim');
-                }, 1000);
-                        // alert('hhh');
-        })
-}
-
-steps1 = $('#steps1');
-steps2 = $('#steps2');
-steps3 = $('#steps3');
-
-arrowAnim(steps1);
-arrowAnim(steps2);
-arrowAnim(steps3);
