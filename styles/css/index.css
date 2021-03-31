@@ -8,6 +8,30 @@
   transition: 0.3s;
 }
 
+.preload {
+  position: absolute;
+  z-index: 100;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  display: none;
+}
+.preload__inner {
+  background: url(../../img/bg.jpg) #057AF0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  animation: preload 20s;
+}
+.preload--closed {
+  display: none;
+}
+.preload--closeAnim {
+  animation: preloadClose 0.5s;
+}
+
 .btn {
   display: block;
   min-height: 30px;
@@ -192,10 +216,39 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(3%);
+    transform: translateY(5%);
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes animArrow {
+  0% {
+    left: -15px;
+    opacity: 1;
+  }
+  100% {
+    left: 90%;
+    opacity: 0;
+  }
+}
+@keyframes preload {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes preloadClose {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .steps {
@@ -281,6 +334,26 @@
 }
 .steps__icon {
   display: none;
+}
+.steps__icon img {
+  margin-right: auto;
+  display: block;
+}
+
+.animated-arrow {
+  position: absolute;
+  display: block;
+  height: 60px;
+  width: 50px;
+  background: url(../../img/svg/arrow.svg);
+  background-size: 150%;
+  background-position: 40%;
+  background-repeat: no-repeat;
+  left: -15px;
+  top: -6px;
+}
+.animated-arrow__anim {
+  animation: animArrow 1s;
 }
 
 .icons__wrap {
